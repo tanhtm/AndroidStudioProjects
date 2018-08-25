@@ -1,0 +1,204 @@
+Index: app/src/main/java/applib/HandlingWeb.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/applib/HandlingWeb.kt	(revision )
++++ app/src/main/java/applib/HandlingWeb.kt	(revision )
+@@ -1,47 +1,97 @@
+ package applib
+ 
++import android.util.Log
++
+ /**
+  * Created by Tanh on 8/28/2017.
+  */
+-class HandlingWeb( ) {
+-    var classWF1="<style>\n" +
+-            "div.ub {\n" +
+-            //"background-color:black;\n" +
+-            "font-size:30px;"+
+-            "font-weight: bold;"+
+-            "color:black;\n" +
+-            "margin:10px;"+
+-            "}\n" +
+-            "</style>"
+-    var classM="<style>\n" +
+-            "div.m {\n" +
+-            "color:red;\n" +
+-            "font-style: italic;"+
+-            "margin-left:20px;"+
+-            "}\n" +
+-            "</style>"
+-    var classE="<style>\n" +
+-            "div.e {\n" +
+-            "color:blue;\n" +
+-            "margin-left:40px;"+
+-            "}\n" +
+-            "</style>"
+-    var classEm="<style>\n" +
+-            "div.em {\n" +
+-            "color:black;\n" +
+-            "margin-left:60px;"+
+-            "}\n" +
+-            "</style>"
+-    fun run(string: String): String{
++class HandlingWeb {
++    private var  myWord: MyWordPro = MyWordPro("")
++    private var strWeb="" // chuỗi web nguyên bản copy trên html
++
++    var MyWord: MyWordPro
++        get() {return myWord}
++        set(value) {myWord= value}
++    constructor(word: String, strWeb: String) {
++        myWord.Word=word
++        this.strWeb = strWeb
++        run()
++    }
++
++    private fun run(){
++        var string = strWeb
+         var str=""
+         var arrayList = string.split("</div>")
++        var h:Int=0
++        var arrayVetor : ArrayList<VecterTypeWord> = ArrayList()
+         for (i in arrayList){
+-            var j=removeLinkWeb(i)
+-            if(check(j))
+-                str+=j+"</div>"
++            var j = removeLinkWeb(i)
++            Log.d("W",j)
++            if(j.contains("class=\"p5l fl cB\"")){
++                var strPron = j.substring(j.indexOf(">[")+2, j.indexOf("]"))
++                myWord.Pronunciation = strPron
++            }else {
++                if (check(j))
++                    str += j + "</div>\n"
++                if (j.contains("class=\"ub\"")){
++                    if(arrayList.size>h+2) {
++                        var vector = getVector(j, arrayList.get(h + 1), removeLinkWeb(arrayList.get(h + 2)), removeLinkWeb(arrayList.get(h + 3)))
++                        arrayVetor.add(vector)
++                    }
++                    else{
++                        var vector = getVector(j, arrayList.get(h + 1), "", "")
++                        arrayVetor.add(vector)
++                    }
++                }
++            }
++            h++
+         }
++        myWord.ListType= arrayVetor
++        myWord.WebViewFull= str
++        Log.d("WEB",str)
++    }
++    fun getVector(strUb: String,strM: String,strE: String,strEm:String):VecterTypeWord{
++        Log.d("W",strE+"\n"+strEm)
++        var type= ""
++        var mean= ""
++        if(strUb.contains("tính từ"))
++            type = "adjective"
++        if(strUb.contains("danh từ"))
++            type = "noun"
++        if(strUb.contains("động từ"))
++            type = "verb"
++        if(strUb.contains("phó từ"))
++            type = "adverb"
++        if(strUb.contains("đại từ"))
++            type = "pronouns"
++        if(strUb.contains("giới từ"))
++            type = "preposition"
++        mean= removeSpan(strM)
++        mean= mean.substring(mean.indexOf(">")+1)
+ 
+-        return "$classWF1$classM$classE$classEm<big><big>$str</big></big>"
++        var vector= VecterTypeWord(type,mean)
++
++        if (!strE.equals("")){
++            var str= strE.substring(strE.indexOf(">")+1)
++            var strMean= strEm.substring(strEm.indexOf("<span>")+6,strEm.indexOf("</span>"))
++            var example= ExampleWord(myWord.Word,str,strMean)
++            vector.Example= example
++        }
++        return vector
++    }
++    fun removeSpan(str: String):String{
++        var string =""
++        var listString= str.split("<span>")
++        for (i in listString){
++            string += i
++        }
++        listString= string.split("</span>")
++        string=""
++        for (i in listString){
++            string += i
++        }
++        Log.d("Web",string)
++        return string
+     }
+     fun check(string: String):Boolean{
+         if(string.contains("class=\"ub\"")||string.contains("class=\"m\"")||string.contains("class=\"e\"")||string.contains("class=\"em\""))
+@@ -51,55 +101,20 @@
+     fun removeLinkWeb(str:String): String{
+         var string = str
+         while (string.contains("href=\"/hoc-tieng-anh/tu-dien/lac-viet/")) {
+-            var string1 = string.substring(string.indexOf("href=\"/hoc-tieng-anh/tu-dien/lac-viet/"), string.indexOf(".html\"") + 6)
++            var string1 = string.substring(string.indexOf("<a href=\"/hoc-tieng-anh/tu-dien/lac-viet/"), string.indexOf(".html\">") + 7)
+             var array = string.split(string1)
+             string=""
+             for (i in array){
+                 string+= i
+             }
+         }
++        while (string.contains("</a>")) {
++            var array = string.split("</a>")
++            string = ""
++            for (i in array) {
++                string += i
++            }
++        }
+         return  string
+     }
+-    fun classHTML(string: String):String{
+-        var str=string
+-        if(string.contains("class=\"m\"")){
+-            var array= string.split("<span>")
+-            if(array.size!=1) {
+-                str = array[0] + "<span>"
+-                for (i in 1 until array.size) {
+-                    str += array[i]+"<span>"
+-                }
+-                str+="</span>"
+-            }
+-            array= string.split("class=\"m\">")
+-            if(array.size!=1) {
+-                str = array[0] + "class=\"m\" style=\"color: red;\"> "
+-                for (i in 1 until array.size) {
+-                    str += array[i]
+-                }
+-            }
+-            str+="</div>"
+-        }
+-        if(string.contains("class=\"e\"")){
+-            var array= string.split("class=\"e\">")
+-            if(array.size!=1) {
+-                str = array[0] + "class=\"e\" style=\"color: blue;\"><span><big><b>-</b></big> </span>"
+-                for (i in 1 until array.size) {
+-                    str += array[i]
+-                }
+-            }
+-            str+="</div>"
+-        }
+-        if(string.contains("class=\"em\"")){
+-            var array= string.split("<span>")
+-            if(array.size!=1) {
+-                str = array[0] + "<span><big><b>--</b></big> "
+-                for (i in 1 until array.size) {
+-                    str += array[i]
+-                }
+-            }
+-            str+= "</div>"
+-        }
+-        return  str
+-    }
+ }
+\ No newline at end of file

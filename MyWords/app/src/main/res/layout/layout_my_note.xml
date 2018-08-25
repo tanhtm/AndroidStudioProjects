@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/buttonSel"
+        android:layout_width="18dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1"
+        android:background="@drawable/background_layout"
+        android:text="@string/ooo"
+        android:textAllCaps="false"
+        android:textColor="#111111"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="0dp"
+        tools:ignore="ButtonStyle" />
+
+    <Button
+        android:id="@+id/buttonNote"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_weight="8"
+        android:background="@drawable/background_layout"
+        android:paddingLeft="10dp"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#111111"
+        android:textSize="18sp"
+        android:layout_gravity="start"
+        tools:ignore="ButtonStyle,RtlSymmetry"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="2dp"
+        android:paddingStart="10dp" />
+
+</LinearLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_layout"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/t_v_ng_m_i"
+        android:textAlignment="center"
+        android:textColor="#111111"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bgrtext">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text="@string/t"
+                android:textColor="#111111"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/editTextWord"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#111111"
+                android:ems="10"
+                android:hint="@string/t_m_i"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textColor="#fffffe"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bgrtext">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/lo_i_t"
+                android:textColor="#111111"
+                android:textSize="24sp" />
+
+            <Spinner
+                android:id="@+id/spinnerType"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#111111"
+                android:dropDownWidth="match_parent" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bgrtext">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/ngh_a"
+                android:textColor="#111111"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/editTextMeaning"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#111111"
+                android:ems="10"
+                android:hint="@string/ngh_a_ti_ng_vi_t"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textColor="#fffffe"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bgrtext">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/ghi_ch"
+                android:textColor="#111111"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/editTextHint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#111111"
+                android:ems="10"
+                android:hint="@string/ghi_ch"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textColor="#fffffe"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bgrtext">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Thư mục"
+                android:textColor="#111111"
+                android:textSize="24sp" />
+
+            <Spinner
+                android:id="@+id/spinnerFolder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#111111"
+                android:dropDownWidth="match_parent" />
+
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_layoutgame"
+            android:text="@string/th_m"
+            android:textAllCaps="false"
+            android:textColor="#111111"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/buttonQuit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/background_layoutgame"
+            android:text="@string/th_i"
+            android:textAllCaps="false"
+            android:textColor="#111111"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+
+</LinearLayout>

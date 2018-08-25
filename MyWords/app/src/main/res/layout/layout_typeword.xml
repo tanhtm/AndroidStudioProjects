@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_non"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/radioType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_non"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonNoun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_non"
+            android:padding="10dp"
+            android:text="noun"
+            android:textColor="#fdfdfd"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonVerb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_non"
+            android:padding="10dp"
+            android:text="verb"
+            android:textColor="#fdfdfd"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonAdj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_non"
+            android:padding="10dp"
+            android:text="adjective"
+            android:textColor="#fdfdfd"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonAdv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_non"
+            android:padding="10dp"
+            android:text="adverb"
+            android:textColor="#fdfdfd"
+            android:textSize="24sp" />
+    </RadioGroup>
+
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_layout"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ghi_ch_m_i"
+        android:textAlignment="center"
+        android:textColor="#111111"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextNote"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#111111"
+        android:ems="10"
+        android:hint="@string/vi_t_ghi_ch_t_i_y"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        android:textColor="#fdfdfd"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonAddNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_layoutgame"
+            android:text="@string/th_m"
+            android:textAllCaps="false"
+            android:textColor="#111111"
+            android:textSize="24sp"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/buttonQuitNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/background_layoutgame"
+            android:text="@string/th_i"
+            android:textAllCaps="false"
+            android:textColor="#111111"
+            android:textSize="24sp"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

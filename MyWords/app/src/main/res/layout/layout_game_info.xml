@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bgrtext"
+        android:text="@string/u_i_t_b_t_ch"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bgrtext"
+        android:padding="10dp"
+        android:text="@string/tr_ch_i_l_y_ng_u_nhi_n_m_t_t_v_ng_trong_kho_c_nh_n_c_a_b_n_l_m_p_n"
+        android:textColor="#111111"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bgrtext"
+        android:padding="10dp"
+        android:text="@string/c_c_ch_c_i_c_a_p_n_s_b_n_d_i_c_c_nhi_m_v_c_a_b_n_l_ph_i_ch_n_c_c_ch_c_i_l_m_xu_t_hi_n_h_t_c_c_ch"
+        android:textColor="#111111"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bgrtext"
+        android:padding="10dp"
+        android:text="@string/n_u_h_t_10_l_n_o_n_sai_b_n_s_d_ng_cu_c_ch_i"
+        android:textColor="#ff0000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bgrtext"
+        android:padding="10dp"
+        android:text="@string/o_n_h_t_c_c_b_n_c_5_i_m_v_n_ph_n_ch_i_ti_p_theo_l_o_n_ngh_a_c_a_t_o_n_ng_b_n_c_th_m_5_i_m"
+        android:textColor="#111111"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bgrtext"
+        android:padding="10dp"
+        android:text="@string/n_u_s_d_ng_g_i_b_n_b_tr_i_5_i_m"
+        android:textColor="#111111"
+        android:textSize="18sp" />
+</LinearLayout>
+</ScrollView>

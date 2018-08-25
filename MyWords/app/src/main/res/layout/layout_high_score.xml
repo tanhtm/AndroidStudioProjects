@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_layout"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/i_m_cao"
+        android:textAlignment="center"
+        android:textColor="#111111"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonNumW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_layoutgame"
+        android:fontFamily="monospace"
+        android:padding="10dp"
+        android:text="@string/number_of_words_100"
+        android:textAllCaps="false"
+        android:textColor="#111111"
+        android:textSize="24sp"
+        tools:ignore="UnusedAttribute" />
+
+    <Button
+        android:id="@+id/buttonHSCC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_layoutgame"
+        android:fontFamily="monospace"
+        android:padding="10dp"
+        android:text="@string/correct_characters"
+        android:textAllCaps="false"
+        android:textColor="#111111"
+        android:textSize="24sp"
+        tools:ignore="UnusedAttribute" />
+</LinearLayout>

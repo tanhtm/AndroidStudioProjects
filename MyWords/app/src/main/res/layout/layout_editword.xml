@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_layout"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="@string/s_a_t"
+        android:textAlignment="center"
+        android:textColor="#111111"
+        android:textSize="30sp"
+        tools:ignore="UnusedAttribute" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bgrtext">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/t"
+                android:textColor="#111111"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/editTextWord"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#111111"
+                android:ems="10"
+                android:hint="@string/word"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textColor="#fdfdfd"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bgrtext">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/lo_i_t"
+                android:textColor="#111111"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/buttonType"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#111111"
+                android:text="type"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#fdfdfd"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bgrtext">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/ngh_a"
+                android:textColor="#111111"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/editTextMeaning"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#111111"
+                android:ems="10"
+                android:hint="@string/meaning"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textColor="#fdfdfd"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bgrtext">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/ghi_ch"
+                android:textColor="#111111"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/editTextHint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#111111"
+                android:ems="10"
+                android:hint="@string/ghi_ch"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textColor="#fdfdfd"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bgrtext">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Thư mục"
+                android:textColor="#111111"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/buttonFolder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#111111"
+                android:text="Folder"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#fdfdfd"
+                android:textSize="20sp" />
+
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/background_layoutgame"
+            android:text="@string/l_u"
+            android:textAllCaps="false"
+            android:textColor="#111111"
+            android:textSize="18sp"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/buttonDel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_layoutgame"
+            android:text="@string/xo"
+            android:textAllCaps="false"
+            android:textColor="#111111"
+            android:textSize="18sp"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/buttonQuit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/background_layoutgame"
+            android:text="@string/th_i"
+            android:textAllCaps="false"
+            android:textColor="#111111"
+            android:textSize="18sp"
+            tools:ignore="ButtonStyle" />
+
+    </LinearLayout>
+</LinearLayout>
